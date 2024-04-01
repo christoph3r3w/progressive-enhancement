@@ -18,7 +18,6 @@
 
 			.detail_container{
 				position: relative;
-				/* outline: solid; */
 				
 			}
 
@@ -38,27 +37,28 @@
 				}
 
 				&[open] summary{
-				border-radius: 10px 10px 0 0;
-					&::marker{
+					border-radius: 10px 10px 0 0;
+						&::marker{
 							color: white;
 							transform: rotate(45deg);
-					}
+						}
 				
-			}
+				}
 
 
 				&:nth-of-type(1){ 
 				
 					>summary {
 						background-color: var(--purple);
-						}
+					}
+
 					article{
-							background-color: var(--purple);
+						background-color: var(--purple);
 							p{
 								margin-block: 0px;
 								padding: 2%;
 							}
-						}
+					}
 				}
 				
 				&:nth-of-type(2){ 
@@ -67,12 +67,12 @@
 						background-color: var(--green);
 					}
 					article{
-							background-color: var(--green);
+						background-color: var(--green);
 							p{
 								margin-block: 0px;
 								padding: 2%;
 							}
-						}
+					}
 				}
 				
 				&:nth-of-type(3){ 
@@ -81,12 +81,12 @@
 						background-color: var(--yellow);
 					}
 					article{
-							background-color: var(--yellow);
+						background-color: var(--yellow);
 							p{
 								margin-block: 0px;
 								padding: 2%;
 							}
-						}
+					}
 				}
 				
 			}
