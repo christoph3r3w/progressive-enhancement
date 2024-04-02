@@ -31,10 +31,8 @@
 
 			main label{
 				width: min-content;
-				>input{
-					outline: solid red;
-					display: none;
-				}
+				
+				/* outline: solid red; */
 
 				.menu_btn{
 					border: 1px solid  ;
@@ -43,7 +41,14 @@
 					width: 5rem ;
 					display: flex;
 					flex-direction: row;
+					cursor: pointer;
 					/* gap: 3%; */
+
+					input{
+					/* display: none; */
+					position: absolute;
+
+					}
 
 					>:nth-child(1){
 						margin-inline: 3%;
@@ -57,11 +62,12 @@
 				left: -999px;
 				background-color: var(--purple);
 				height: 100%;
-				width: 40%;
+				min-width: 40%;
+				max-width: fit-content;
 			}
 
 			nav > label{
-				outline: solid red;
+				/* outline: solid red; */
 				background-color: aqua;
 
 				.exit_btn{
@@ -69,9 +75,11 @@
 					display: flex;
 					justify-content: right;
 					
+					
 					svg{
 						padding-inline: 5%;
 						padding-block: 5%;
+						cursor: pointer;
 					}
 				}
 
@@ -98,8 +106,10 @@
 			
 			<!-- Hint: Wat heb je nodig, als je op een klein scherm naar het menu wilt? -->
 			<label for="menu">
-				<input type="checkbox" name="side_menu" id="menu">
+				<!-- menu btn -->
 				<div class="menu_btn">
+					<input type="checkbox" name="side_menu" id="menu">
+
 					<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 						<path d="M4 8l16 0" /><path d="M4 16l16 0" />
 						<title>menu</title>
@@ -110,7 +120,7 @@
 			
 
 			Deze tekst kun je gebruiken, zodat de pagina wat langer wordt
-			<article id="sidebar">
+			<article id="main">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum eget elit eu tincidunt. Donec gravida nulla at justo sollicitudin, hendrerit faucibus diam tincidunt. Pellentesque porta neque quis nunc laoreet congue. Sed porttitor nec tellus nec semper. Cras pharetra dictum risus ut sagittis. Aliquam in iaculis arcu. Nulla sit amet diam sit amet mauris placerat laoreet eu vel turpis. Vivamus ac massa ut diam gravida elementum ut nec nulla. Integer vel felis massa. Quisque facilisis enim ornare ultricies mattis. Fusce porta rhoncus ex. Nunc viverra orci at leo fermentum convallis. Morbi sodales, lectus congue aliquam maximus, metus ipsum placerat turpis, vitae venenatis metus erat vel eros. Vestibulum lobortis accumsan elit nec maximus. Vivamus mollis ullamcorper felis, id aliquet tellus volutpat at.</p>
 				<p>In ante sem, faucibus sit amet nisl ut, efficitur mattis augue. Aenean fringilla lorem id metus ultrices bibendum. Quisque eleifend enim purus, eu bibendum mauris blandit nec. Donec vitae purus sed eros ullamcorper vehicula sit amet eu massa. Vestibulum eget mi vel tellus pharetra convallis quis quis nunc. Maecenas bibendum neque sit amet neque ultrices sollicitudin. Donec viverra arcu nec urna accumsan pharetra. Donec pharetra lacinia elementum.</p>
 				<p>Aliquam auctor diam ut ipsum mattis semper. Praesent auctor quam ut libero aliquet, at gravida nunc aliquam. Duis mollis faucibus nisi at fringilla. Vestibulum at vulputate tortor, eget consequat libero. Praesent non ante libero. Praesent imperdiet neque at lacus mattis, at tincidunt odio ullamcorper. In massa metus, iaculis id vulputate vel, aliquam eu sem. Nulla varius lorem ut justo consectetur consectetur. Nulla viverra, metus in dapibus facilisis, magna sapien lobortis urna, vel mattis sapien velit at nisi. Nullam semper est lorem, id lobortis est blandit gravida. Nulla purus orci, aliquet ac purus at, eleifend ultricies dolor. Vivamus lobortis lectus quis augue molestie congue. Morbi vel libero ac ex sagittis euismod vitae eu dolor. Nunc sed libero enim. Duis at lacus et est fermentum ullamcorper et non eros. Ut semper auctor commodo.</p>
@@ -130,7 +140,9 @@
 		</main>
 
 		Dit is het menu
-		<nav>
+
+		<nav id="sidebar">
+			<!-- exit btn -->
 			<label for="menu">
 				<div class="exit_btn">		
 					<svg viewBox="0 0 32 32" width="32" height="32">
