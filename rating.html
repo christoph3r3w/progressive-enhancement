@@ -14,30 +14,159 @@
 			*/
 
 			/* Hint: met Grid Layout kun je elementen over elkaar heen leggen */
+
+			.starGrid{
+				display: flex;
+				flex-direction: row-reverse;
+				width: min-content;
+				height: min-content;
+				
+				input{appearance: none;}
+
+				label{
+					width: 2rem;
+					height: min-content;
+					padding-inline: 5px;
+					display: grid;
+					grid-template-areas: 'a';
+				}
+
+			
+				&:has(input:checked) label:has(input:checked){
+					 span:nth-of-type(2){
+						opacity: 1;
+					}
+
+					~ label:nth-last-of-type(n) span:nth-of-type(2){
+						opacity: 1;
+					}
+				}
+				&:has(:hover) label:has(:hover){
+					 span:nth-of-type(2){
+						opacity: 1;
+					}
+
+					~ label:nth-last-of-type(n) span:nth-of-type(2){
+						opacity: 1;
+					}
+				}
+			
+
+				label:nth-of-type(n) span{
+						grid-area: a;
+						
+						&:nth-of-type(1){
+							z-index: 0;
+						}
+						&:nth-of-type(2){	
+							z-index: 2;
+							opacity: 0;
+							&:hover{
+								opacity: 1;
+							}
+						}
+						
+					}
+				}
+				 
+
+
+			
+
 		</style>
 	</head>
 	<body>
 		<h1>Rating</h1>
 
-		<!-- Dit zijn de SVG's van de sterren. Maar horen die wel in HTML, of is dit eigenlijk styling?
+		Dit zijn de SVG's van de sterren. Maar horen die wel in HTML, of is dit eigenlijk styling?
+		<form method="post">
+			<article class="starGrid">
 
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-				<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
-			</svg>
 
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-				<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
-			</svg>
-		-->
+				<label for="star1">
+					<input type="radio" name="star" id="star1" value="5">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+						</svg>
+					</span>
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+						</svg>
+					</span>
+					
+				</label>
+			
+				<label for="star2">
+					<input type="radio" name="star" id="star2" value="4">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+						</svg>
+					</span>
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+						</svg>
+					</span>
+					
+				</label>
+			
+				<label for="star3">
+					<input type="radio" name="star" id="star3" value="3">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+						</svg>
+					</span>
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+						</svg>
+					</span>
+					
+				</label>
+			
+				<label for="star4">
+					<input type="radio" name="star" id="star4" value="2">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+						</svg>
+					</span>
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+						</svg>
+					</span>
+					
+				</label>
+			
+				<label for="star5">
+					<input type="radio" name="star" id="star5" value="1">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798zM16 23.547l-6.983 3.671 1.334-7.776-5.65-5.507 7.808-1.134 3.492-7.075 3.492 7.075 7.807 1.134-5.65 5.507 1.334 7.776-6.983-3.671z"></path>
+						</svg>
+					</span>
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path fill="#66E5BF" d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+						</svg>
+					</span>
+					
+				</label>
+				
+			</article>
 
 		<!-- Waarschijnlijk wil je je rating ooit opslaan, dus heb je een formulier nodig -->
-		<form method="post">
 
-			<!-- Hint: hoeveel verschillende ratings kun je geven? -->
+		<!-- Hint: hoeveel verschillende ratings kun je geven? -->
 
 		</form>
 
-		<details open>
+		<details>
 			<summary>Demo video</summary>
 			<video src="assets/rating.mp4" width="271" height="110" controls muted autoplay loop>
 				<a href="assets/rating.mp4">assets/rating.mp4</a>

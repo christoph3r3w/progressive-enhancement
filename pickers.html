@@ -6,7 +6,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 		<link href="assets/styles.css" rel="stylesheet">
 		<style>
-			/* Schrijf hier gewoon je CSS voor dit component */
+			
+			body{
+				border: solid red;
+				height: 100vh;
+			}
 
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
@@ -21,29 +25,38 @@
 
 			<!-- Hint: hoe kun je aan een invoerelement een lijst meegeven? -->
 
-			<!-- Een lijstje met docenten
-			Berat Zekaj
-			Charley Muhren
-			Cyd Stumpel
-			Dorien Drees
-			Joost Faber
-			Justus Sturkenboom
-			Koop Reijnders
-			Krijn Hoetmer
-			Sanne 't Hooft
-			Suus ten Voorde
-			-->
+			<label for="docenten">Een lijstje met docenten</label>
+			<select required>
+				<option id="docenten" >choose your favorite</option>
+				
+					<option value="Berat Zekaj">Berat Zekaj</option>
+					<option value="Charley Muhren">Charley Muhren</option>
+					<option value="Cyd Stumpel">Cyd Stumpel</option>
+					<option value="Dorien Drees">Dorien Drees</option>
+					<option value="Joost Faber">Joost Faber</option>
+					<option value="Justus Sturkenboom">Justus Sturkenboom</option>
+					<option value="Koop Reijnders">Koop Reijnders</option>
+					<option value="Krijn Hoetmer">Krijn Hoetmer</option>
+					<option value="Sanne 't Hooft">Sanne 't Hooft</option>
+					<option value="Suus ten Voorde">Suus ten Voorde</option>
+				</option>
+			</select>
+			
 
-			<!-- De kleurcodes van FDND:
-			#A675F5
-			#050542
-			#66E5BF
-			#FFFC86
-			-->
+			<select name="" id="" disabled="disabled">
+				<option value="">#A675F5</option>
+				<option value="">#050542</option>
+				<option value="">#66E5BF</option>
+				<option value="">#FFFC86</option>
+				
+				
+				
+				
+			</select>
 
 		</form>
 
-		<details open>
+		<details>
 			<summary>Demo video</summary>
 			<video src="assets/pickers.mp4" width="749" height="417" controls muted autoplay loop>
 				<a href="assets/pickers.mp4">assets/pickers.mp4</a>
